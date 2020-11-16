@@ -14,6 +14,10 @@
     "Robert Barnwell <robert@robertismy.name>",
     "Sahar Jafari <shr.jafari@gmail.com>"
   ],
+  "engines": {
+    "node": "15.x",
+    "npm": "7.x"
+  },
   "license": "Apache-2.0",
   "scripts": {
     "automated-release": "release-it -VV --config ./release/.release-it.json",
