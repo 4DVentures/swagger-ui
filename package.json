@@ -113,7 +113,9 @@
     "swagger-client": "=3.12.0",
     "url-parse": "^1.4.7",
     "xml-but-prettier": "^1.0.1",
-    "zenscroll": "^4.0.2"
+    "zenscroll": "^4.0.2",
+    "webpack-cli": "^3.3.11",
+    "webpack": "^4.43.0"
   },
   "devDependencies": {    
    
@@ -177,10 +179,8 @@
     "source-map-support": "^0.5.19",
     "tachyons-sass": "^4.9.5",
     "terser-webpack-plugin": "^4.0.0",
-    "url-loader": "^2.3.0",
-    "webpack": "^4.43.0",
-    "webpack-bundle-size-analyzer": "^3.1.0",
-    "webpack-cli": "^3.3.11",
+    "url-loader": "^2.3.0",    
+    "webpack-bundle-size-analyzer": "^3.1.0",    
     "webpack-dev-server": "^3.11.0",
     "webpack-stats-plugin": "=1.0.2"
   },
