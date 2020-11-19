@@ -18,11 +18,10 @@
     "node": "14.x",
     "npm": "6.x"
   },
-  "type":"module",
   "license": "Apache-2.0",
   "scripts": {
     "automated-release": "release-it -VV --config ./release/.release-it.json",
-    "build": "run-p --aggregate-output build-core build-bundle build-standalone",
+    "build": "run-p --aggregate-output build-core build-bundle build-standalone build-stylesheets build:es:bundle build:es:bundle:core",
     "build-bundle": "webpack --colors --config webpack/bundle.babel.js",
     "build-core": "webpack --colors --config webpack/core.babel.js",
     "build-standalone": "webpack --colors --config webpack/standalone.babel.js",
@@ -63,6 +62,9 @@
     "start": "npm-run-all --parallel serve-static open-static"
   },
   "dependencies": {
+    "@babel/register": "=7.12.1",
+    "@babel/cli": "=7.12.1",
+    "@babel/core": "=7.12.3",
     "@babel/runtime-corejs3": "^7.11.2",
     "@braintree/sanitize-url": "^5.0.0",
     "@kyleshockey/object-assign-deep": "^0.4.2",
@@ -102,16 +104,13 @@
     "xml-but-prettier": "^1.0.1",
     "zenscroll": "^4.0.2"
   },
-  "devDependencies": {
-    "@babel/cli": "=7.12.1",
-    "@babel/core": "=7.12.3",
+  "devDependencies": {    
     "@babel/plugin-proposal-class-properties": "=7.12.1",
     "@babel/plugin-proposal-nullish-coalescing-operator": "=7.12.1",
     "@babel/plugin-proposal-optional-chaining": "=7.12.1",
     "@babel/plugin-transform-runtime": "=7.12.1",
     "@babel/preset-env": "=7.12.1",
     "@babel/preset-react": "=7.12.5",
-    "@babel/register": "=7.12.1",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@jest/globals": "=26.6.2",
